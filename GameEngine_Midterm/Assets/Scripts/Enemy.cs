@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public float damage = 2f;
     public float moveSpeed = 2f;
     public float traceRange = 15f; // 추적 시작 거리
     public float attackRange = 6f; // 공격 시작 거리
@@ -50,5 +51,14 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log($"{gameObject.name} 사망!");
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerController pc = other.GetComponent<PlayerController>();
+            if (pc != null) pc.TakeDamage(damage);
+        }
     }
 }

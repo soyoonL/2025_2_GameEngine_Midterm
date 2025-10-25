@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("체력 변수")]
     public float maxHP = 100f;
-    private float currentHP;
+    public float currentHP;
 
     [Header("화염방사기")]
     public ParticleSystem Flame;
