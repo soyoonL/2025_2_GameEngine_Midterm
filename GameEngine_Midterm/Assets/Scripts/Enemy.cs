@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -16,12 +17,14 @@ public class Enemy : MonoBehaviour
     private float lastAttackTime;
     public float maxHP = 5;
     public float currentHP;
+    public Slider hpslider;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         lastAttackTime = -attackCooldown;
         currentHP = maxHP;
+        hpslider.value = 1f;
     }
 
     void Update()
@@ -36,6 +39,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         currentHP -= damage;
+        hpslider.value = (float)currentHP / maxHP;
         if(currentHP <= 0)
         {
             Die();
