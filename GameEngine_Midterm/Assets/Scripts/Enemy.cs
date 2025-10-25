@@ -53,11 +53,11 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionStay(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerController pc = other.GetComponent<PlayerController>();
+            PlayerController pc = collision.gameObject.GetComponent<PlayerController>();
             if (pc != null) pc.TakeDamage(damage);
         }
     }
