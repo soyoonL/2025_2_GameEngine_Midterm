@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2483824305006381762}
   - component: {fileID: 442448258047817937}
   - component: {fileID: 6124569343683191321}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7916354295881918961}
   - component: {fileID: 1318794382748878161}
   - component: {fileID: 8214652244706415457}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,9 +189,9 @@ GameObject:
   - component: {fileID: 6001841823156550841}
   - component: {fileID: 8341175169658136615}
   - component: {fileID: 1269321902150045429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bug
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c4e0c254dd45d4cb3e9b716389e746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 2
   moveSpeed: 2
   traceRange: 15
   attackRange: 6
@@ -289,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6204982095751126744}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +328,7 @@ GameObject:
   - component: {fileID: 8744269764035015126}
   - component: {fileID: 6772717772956802258}
   - component: {fileID: 7775215985397707093}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5489234326662705974}
   - component: {fileID: 4550560957679100618}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: EnemySlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -542,6 +543,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\uC720\uCDA9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33b93b68d96b76a438c70084d892da11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 33b93b68d96b76a438c70084d892da11,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
