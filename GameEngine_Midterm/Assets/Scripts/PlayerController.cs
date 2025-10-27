@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviour
         if (other.GetComponent<SceneObject>() != null)
         {
             string info = other.GetComponent<SceneObject>().objectInfo;
-            if (info.StartsWith("Scene"))
+            if (info.StartsWith("Episode"))
             {
                 UnityEngine.SceneManagement.SceneManager.LoadScene(info);
             }
